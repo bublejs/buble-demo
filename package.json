@@ -5,7 +5,7 @@
   "main": "gobblefile.js",
   "dependencies": {
     "codemirror": "^5.13.4",
-    "ractive": "^0.7.3"
+    "ractive": "ractivejs/ractive#f24c311a17223854feaee4f1f007b7f2bfbd65f6"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
