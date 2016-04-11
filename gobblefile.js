@@ -9,7 +9,7 @@ module.exports = gobble([
 		.include( 'buble.deps.js' ),
 
 		gobble( 'node_modules/ractive' )
-			.include( 'ractive.js' )
+			.include( 'ractive.runtime.js' )
 			.moveTo( 'ractive' ),
 
 		gobble( 'node_modules/codemirror' )
