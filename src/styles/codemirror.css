@@ -11,5 +11,6 @@
 	box-sizing: border-box;
 	overflow-x: hidden !important;
 	margin-bottom: 0;
+	min-height: 5em;
 	/*max-height: 80vh;*/
 }

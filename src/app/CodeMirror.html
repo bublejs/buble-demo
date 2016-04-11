@@ -21,7 +21,7 @@
 			let updating = false;
 
 			this.observe( 'value', value => {
-				if ( updating ) return;
+				if ( updating || typeof value !== 'string' ) return;
 
 				updating = true;
 				cm.setValue( value );

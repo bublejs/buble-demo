@@ -70,3 +70,14 @@ const view = new Demo({
 view.observe( 'input', input => {
 	window.location.hash = encodeURIComponent( input );
 });
+
+window.addEventListener( 'hashchange', () => {
+	view.set( 'input', decodeURIComponent( window.location.hash.slice( 1 ) ) );
+});
+
+document.querySelector( 'h1 a' ).addEventListener( 'click', event => {
+	if ( event.which === 1 ) {
+		event.preventDefault();
+		view.set( 'input', sample );
+	}
+});

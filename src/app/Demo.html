@@ -5,6 +5,14 @@
 	<CodeMirror value='{{input}}'>
 </div>
 
+{{#if error}}
+	<!-- <div class='error-container'> -->
+		<div class='error' intro='slide:fast'>
+			{{error.message}}
+		</div>
+	<!-- </div> -->
+{{/if}}
+
 <div class='output'>
 	<h2>output</h2>
 	<CodeMirror value='{{output}}' readonly>
@@ -14,9 +22,18 @@
 <style>
 	.input, .output {
 		position: relative;
-		/*height: 80vh;*/
 		box-sizing: border-box;
-		/*padding: 2em 0 0 0;*/
+	}
+
+	.error {
+		position: fixed;
+		width: 100%;
+		bottom: 0;
+		padding: 0.5em;
+		background-color: rgb(255,220,220);
+		border-top: 1px solid rgb(200,0,0);
+		color: rgb(200,0,0);
+		z-index: 999;
 	}
 
 	.output .CodeMirror {
@@ -44,10 +61,6 @@
 		background-color: #333;
 		color: white;
 		opacity: 0.4;
-	}
-
-	h2:hover {
-		opacity: 0.2;
 		pointer-events: none;
 	}
 
@@ -57,24 +70,42 @@
 			height: 100%;
 			float: left;
 		}
+
+		.error-container {
+			bottom: 0;
+		}
 	}
 </style>
 
 
 <script>
+	import slide from 'ractive-transitions-slide';
+
 	component.exports = {
 		data: () => ({
-			input: '// TODO'
+			error: null
 		}),
 
 		oninit () {
+			let lastError;
+			let timeout;
+
 			this.observe( 'input', input => {
+				clearTimeout( timeout );
+
 				try {
-					this.set( 'output', buble.transform( input ).code );
+					this.set({
+						output: buble.transform( input ).code,
+						error: null
+					});
 				} catch ( err ) {
-					console.error( err );
+					timeout = setTimeout( () => {
+						this.set( 'error', err );
+					}, 400 );
 				}
 			});
-		}
+		},
+
+		transitions: { slide }
 	};
 </script>
