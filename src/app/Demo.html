@@ -1,7 +1,10 @@
 <link rel='ractive' href='./CodeMirror.html'>
 
 <div class='input'>
-	<h2>input</h2>
+	{{#if showLabels}}
+		<h2 on-mouseover='set("showLabels",false)' outro='fade:fast'>input</h2>
+	{{/if}}
+
 	<CodeMirror value='{{input}}'>
 </div>
 
@@ -14,7 +17,10 @@
 {{/if}}
 
 <div class='output'>
-	<h2>output</h2>
+	{{#if showLabels}}
+		<h2 on-mouseover='set("showLabels",false)' outro='fade:fast'>output</h2>
+	{{/if}}
+
 	<CodeMirror value='{{output}}' readonly>
 </div>
 
@@ -60,8 +66,9 @@
 		padding: 0.5rem 1rem;
 		background-color: #333;
 		color: white;
-		opacity: 0.4;
-		pointer-events: none;
+		opacity: 0.8;
+		z-index: 999;
+		/*pointer-events: none;*/
 	}
 
 	@media (min-width: 768px) {
@@ -80,10 +87,12 @@
 
 <script>
 	import slide from 'ractive-transitions-slide';
+	import fade from 'ractive-transitions-fade';
 
 	component.exports = {
 		data: () => ({
-			error: null
+			error: null,
+			showLabels: true
 		}),
 
 		oninit () {
@@ -104,8 +113,12 @@
 					}, 400 );
 				}
 			});
+
+			setTimeout( () => {
+				this.set( 'showLabels', false );
+			}, 8 * 1000 );
 		},
 
-		transitions: { slide }
+		transitions: { fade, slide }
 	};
 </script>

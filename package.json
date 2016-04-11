@@ -7,6 +7,7 @@
     "buble": "^0.4.7",
     "codemirror": "^5.13.4",
     "ractive": "ractivejs/ractive#f24c311a17223854feaee4f1f007b7f2bfbd65f6",
+    "ractive-transitions-fade": "^0.3.1",
     "ractive-transitions-slide": "^0.4.0"
   },
   "devDependencies": {
