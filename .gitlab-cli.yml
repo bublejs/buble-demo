@@ -3,6 +3,6 @@ image: node:latest
 before_script:
   - npm install
 
-build:
+deploy:
   script:
-  - npm run build
+  - npm run deploy
