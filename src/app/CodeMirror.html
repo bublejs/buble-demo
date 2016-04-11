@@ -1,0 +1,42 @@
+<textarea></textarea>
+
+<style>
+	textarea {
+		border: 1px solid #eee;
+	}
+</style>
+
+<script>
+	component.exports = {
+		onrender () {
+			let cm = CodeMirror.fromTextArea( this.find( 'textarea' ), {
+				lineNumbers: true,
+				lineWrapping: true,
+				mode: 'javascript',
+				readOnly: this.get( 'readonly' )
+			});
+
+			cm.setSize( null, '100%' );
+
+			let updating = false;
+
+			this.observe( 'value', value => {
+				if ( updating ) return;
+
+				updating = true;
+				cm.setValue( value );
+				updating = false;
+			});
+
+			cm.on( 'change', instance => {
+				if ( updating ) return;
+
+				updating = true;
+				this.set( 'value', instance.getValue() );
+				updating = false;
+			});
+
+			setTimeout( () => cm.refresh() );
+		}
+	};
+</script>

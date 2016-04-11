@@ -1,0 +1,80 @@
+<link rel='ractive' href='./CodeMirror.html'>
+
+<div class='input'>
+	<h2>input</h2>
+	<CodeMirror value='{{input}}'>
+</div>
+
+<div class='output'>
+	<h2>output</h2>
+	<CodeMirror value='{{output}}' readonly>
+</div>
+
+
+<style>
+	.input, .output {
+		position: relative;
+		/*height: 80vh;*/
+		box-sizing: border-box;
+		/*padding: 2em 0 0 0;*/
+	}
+
+	.output .CodeMirror {
+		background-color: #f4f4f4;
+	}
+
+	.output .CodeMirror-lines {
+		cursor: default !important;
+	}
+
+	h2 {
+		position: absolute;
+		top: 1rem;
+		right: 2rem;
+		z-index: 2;
+		font-family: 'Typo Round';
+		font-size: 1rem;
+		text-transform: lowercase;
+		margin: 0;
+		font-weight: 400;
+		-webkit-transition: opacity 0.2s;
+		transition: opacity 0.2s;
+		border-radius: 2rem;
+		padding: 0.5rem 1rem;
+		background-color: #333;
+		color: white;
+		opacity: 0.4;
+	}
+
+	h2:hover {
+		opacity: 0.2;
+		pointer-events: none;
+	}
+
+	@media (min-width: 768px) {
+		.input, .output {
+			width: 50%;
+			height: 100%;
+			float: left;
+		}
+	}
+</style>
+
+
+<script>
+	component.exports = {
+		data: () => ({
+			input: '// TODO'
+		}),
+
+		oninit () {
+			this.observe( 'input', input => {
+				try {
+					this.set( 'output', buble.transform( input ).code );
+				} catch ( err ) {
+					console.error( err );
+				}
+			});
+		}
+	};
+</script>

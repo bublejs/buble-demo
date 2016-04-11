@@ -1,0 +1,15 @@
+.CodeMirror {
+	font-family: 'Inconsolata';
+}
+
+.CodeMirror {
+	height: auto;
+}
+
+.CodeMirror-scroll {
+	/*padding: 0.5em;*/
+	box-sizing: border-box;
+	overflow-x: hidden !important;
+	margin-bottom: 0;
+	/*max-height: 80vh;*/
+}

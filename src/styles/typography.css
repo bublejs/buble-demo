@@ -1,0 +1,46 @@
+@font-face{
+	font-family: 'Inconsolata';
+	src: url('fonts/Inconsolata/Inconsolata-Regular.ttf') format('truetype');
+}
+
+@font-face{
+	font-family: 'Inconsolata';
+	src: url('fonts/Inconsolata/Inconsolata-Bold.ttf') format('truetype');
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: 'Typo Round';
+	src: url('fonts/typo_round/typo_round_regular_demo-webfont.eot');
+	src: url('fonts/typo_round/typo_round_regular_demo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/typo_round/typo_round_regular_demo-webfont.woff2') format('woff2'),
+         url('fonts/typo_round/typo_round_regular_demo-webfont.woff') format('woff'),
+         url('fonts/typo_round/typo_round_regular_demo-webfont.ttf') format('truetype'),
+         url('fonts/typo_round/typo_round_regular_demo-webfont.svg#typo_round_regular_demoRg') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Typo Round';
+	src: url('fonts/typo_round/typo_round_light_demo-webfont.eot');
+	src: url('fonts/typo_round/typo_round_light_demo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/typo_round/typo_round_light_demo-webfont.woff2') format('woff2'),
+         url('fonts/typo_round/typo_round_light_demo-webfont.woff') format('woff'),
+         url('fonts/typo_round/typo_round_light_demo-webfont.ttf') format('truetype'),
+         url('fonts/typo_round/typo_round_light_demo-webfont.svg#typo_round_light_demoRg') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Typo Round';
+	src: url('fonts/typo_round/typo_round_thin_demo-webfont.eot');
+	src: url('fonts/typo_round/typo_round_thin_demo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/typo_round/typo_round_thin_demo-webfont.woff2') format('woff2'),
+         url('fonts/typo_round/typo_round_thin_demo-webfont.woff') format('woff'),
+         url('fonts/typo_round/typo_round_thin_demo-webfont.ttf') format('truetype'),
+         url('fonts/typo_round/typo_round_thin_demo-webfont.svg#typo_round_thin_demoRg') format('svg');
+	font-weight: 200;
+	font-style: normal;
+}
