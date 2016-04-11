@@ -57,9 +57,16 @@ for ( let i = 0; i < 10; i += 1 ) {
 
 `.trim();
 
+// recover state from hash fragment
+const recovered = decodeURIComponent( window.location.hash.slice( 1 ) );
+
 const view = new Demo({
 	el: 'main',
 	data: {
-		input: sample
+		input: recovered || sample
 	}
+});
+
+view.observe( 'input', input => {
+	window.location.hash = encodeURIComponent( input );
 });
