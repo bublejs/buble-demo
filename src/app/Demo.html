@@ -5,7 +5,7 @@
 		<h2 on-mouseover='set("showLabels",false)' outro='fade:fast'>input</h2>
 	{{/if}}
 
-	<CodeMirror value='{{input}}'>
+	<CodeMirror value='{{input}}' error='{{error}}'>
 </div>
 
 {{#if error}}
@@ -40,6 +40,31 @@
 		border-top: 1px solid rgb(200,0,0);
 		color: rgb(200,0,0);
 		z-index: 999;
+	}
+
+	.error-loc {
+		position: relative;
+	}
+
+	.error-loc::before {
+		position: absolute;
+		content: '^';
+		display: inline-block;
+		bottom: -1em;
+		left: -0.2em;
+		/*background-color: rgb(200,0,0);
+		color: white;*/
+		background-color: white;
+		color: rgb(200,0,0);
+		font-size: 1em;
+		font-weight: 500;
+		/*width: 1em;
+		height: 1em;*/
+		/*padding: 0.1em;
+		text-align: center;*/
+		border-radius: 50%;
+		-webkit-animation: pulse 1s infinite;
+		animation: pulse 1s infinite;
 	}
 
 	.output .CodeMirror {

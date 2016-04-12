@@ -1,13 +1,11 @@
 <textarea></textarea>
 
-<style>
-	textarea {
-		border: 1px solid #eee;
-	}
-</style>
-
 <script>
 	component.exports = {
+		data: () => ({
+			error: null
+		}),
+
 		onrender () {
 			let cm = CodeMirror.fromTextArea( this.find( 'textarea' ), {
 				lineNumbers: true,
@@ -34,6 +32,18 @@
 				updating = true;
 				this.set( 'value', instance.getValue() );
 				updating = false;
+			});
+
+			let marker;
+			this.observe( 'error', error => {
+				if ( marker ) marker.clear();
+
+				if ( error && error.loc ) {
+					const { line, column } = error.loc;
+					marker = cm.markText({ line: line - 1, ch: column }, { line: line - 1, ch: column + 1 }, {
+						className: 'error-loc'
+					});
+				}
 			});
 
 			setTimeout( () => cm.refresh() );
