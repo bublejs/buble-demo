@@ -1,6 +1,20 @@
 import Demo from './Demo.html';
 
 const sample = `
+/*
+  Thanks for trying Bublé! Quickstart:
+
+  $ npm install -g buble
+  $ echo "const answer = () => 42" > input.js
+  $ buble input.js > output.js
+  $ cat output.js
+
+  This is a relatively new project – please report
+  any bugs you find by clicking 'report bugs' and
+  linking to a version of this page demonstrating
+  the issue. Thanks!
+*/
+
 // arrow functions
 const add = ( a, b ) => a + b;
 
@@ -45,6 +59,9 @@ function sprintf ( str, ...values ) {
     return format( values.shift(), type );
   });
 }
+
+// spread operator
+var max = Math.max( ...values );
 
 // block scoping
 for ( let i = 0; i < 10; i += 1 ) {
