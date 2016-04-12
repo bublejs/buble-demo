@@ -13,6 +13,9 @@ const sample = `
   any bugs you find by clicking 'report bugs' and
   linking to a version of this page demonstrating
   the issue. Thanks!
+
+  Note that some ES2015 features are deliberately
+  unsupported - click the 'more info' link in nav.
 */
 
 // arrow functions
