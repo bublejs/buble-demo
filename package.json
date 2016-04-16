@@ -16,6 +16,7 @@
     "gobble": "^0.10.2",
     "gobble-cli": "^0.6.0",
     "gobble-postcss": "^0.3.0",
+    "gobble-replace": "^0.3.1",
     "gobble-rollup": "^0.25.0",
     "gobble-uglifyjs": "^0.2.1",
     "postcss-clearfix": "^1.0.0",

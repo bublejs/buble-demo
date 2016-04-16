@@ -1,18 +1,21 @@
 /*global module, require */
 var gobble = require( 'gobble' );
 
+var version = require( 'buble/package.json' ).version;
+
 module.exports = gobble([
-	gobble( 'src/files' ),
+	gobble( 'src/files' )
+		.transform( 'replace', { version: version }),
 
 	// node_modules
 	gobble( 'node_modules/buble/dist' )
 		.include( 'buble.deps.js' ),
 
-		gobble( 'node_modules/ractive' )
-			.include( 'ractive.runtime.js' )
-			.moveTo( 'ractive' ),
+	gobble( 'node_modules/ractive' )
+		.include( 'ractive.runtime.js' )
+		.moveTo( 'ractive' ),
 
-		gobble( 'node_modules/codemirror' )
+	gobble( 'node_modules/codemirror' )
 		.include([ 'lib/**', 'mode/javascript/**', 'mode/shell/**' ])
 		.moveTo( 'codemirror' ),
 
