@@ -44,3 +44,68 @@
 	font-weight: 200;
 	font-style: normal;
 }
+
+@font-face{
+	font-family: 'Source Sans Pro';
+	src: url('fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf') format('truetype');
+}
+
+@font-face{
+	font-family: 'Source Sans Pro';
+	src: url('fonts/Source_Sans_Pro/SourceSansPro-Light.ttf') format('truetype');
+	font-weight: 200;
+}
+
+@font-face{
+	font-family: 'Source Sans Pro';
+	src: url('fonts/Source_Sans_Pro/SourceSansPro-Semibold.ttf') format('truetype');
+	font-weight: 500;
+}
+
+body {
+	font-family: 'Source Sans Pro', arial, sans-serif;
+	font-weight: 400;
+	color: #555;
+	-webkit-font-smoothing: antialiased;
+}
+
+header {
+	font-family: 'Typo Round';
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #333;
+}
+
+h1 {
+	font-weight: 500;
+	margin: 0 0.3em 0 0;
+	text-transform: lowercase;
+	font-size: 2em;
+	line-height: 2rem;
+	display: inline;
+	text-decoration: none;
+	color: rgba(0,0,0,0.9);
+}
+
+a, a:visited {
+	text-decoration: none;
+	color: rgba(0,0,0,0.9);
+}
+
+nav a, nav a:visited {
+	display: inline-block;
+	color: rgba(0,0,0,0.5);
+	text-decoration: none;
+	line-height: 1;
+	padding: 0 0 0 0.5em;
+}
+
+nav a:hover {
+	color: rgba(0,0,0,0.9);
+	text-decoration: underline;
+}
+
+li {
+	margin: 0 0 0.5em 0;
+}
