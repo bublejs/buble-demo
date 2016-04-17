@@ -33,3 +33,10 @@ The traditional approach to code transformation is to generate an [abstract synt
 This is made possible by [magic-string](https://github.com/Rich-Harris/magic-string).
 
 Forgoing the flexibility of a plugin system also makes it easy for Bublé to be fast.
+
+
+### What does Babel do better than Bublé?
+
+Lots of things. It's mature, battle-tested and has a huge and enthusiastic community around it. It's extremely flexible, allowing you to create your own transformation plugins, and has a large ecosystem of existing plugins. It can handle JSX.
+
+If you need the additional power and flexibility, or don't share Bublé's [opinions](#what-is-buble) about spec compliance, you should continue to use Babel.
