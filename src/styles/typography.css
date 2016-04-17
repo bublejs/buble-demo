@@ -85,7 +85,7 @@ h1 {
 	line-height: 2rem;
 	display: inline;
 	text-decoration: none;
-	color: rgba(0,0,0,0.9);
+	color: white;
 }
 
 a, a:visited {
@@ -93,16 +93,20 @@ a, a:visited {
 	color: rgba(0,0,0,0.9);
 }
 
+h1 a, h1 a:visited, footer a, footer a:visited {
+	color: white;
+}
+
 nav a, nav a:visited {
 	display: inline-block;
-	color: rgba(0,0,0,0.5);
+	color: rgba(255,255,255,0.8);
 	text-decoration: none;
 	line-height: 1;
 	padding: 0 0 0 0.5em;
 }
 
 nav a:hover {
-	color: rgba(0,0,0,0.9);
+	color: rgba(255,255,255,1);
 	text-decoration: underline;
 }
 

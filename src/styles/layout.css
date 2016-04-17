@@ -20,9 +20,10 @@ header {
 	height: 4em;
 	top: 0;
 	left: 0;
-	border-bottom: 1px solid #333;
+	/*border-bottom: 1px solid #333;*/
 	padding: 1em;
-	background-color: rgb(220,240,255);
+	background-color: #0074D9;
+	color: white;
 }
 
 small {
@@ -47,16 +48,17 @@ nav {
 
 footer {
 	padding: 0.4em 1em;
-	border-top: 1px solid #333;
+	/*border-top: 1px solid #333;*/
 	text-align: center;
 	line-height: 1;
 	height: 2em;
-	background-color: rgb(220,240,255);
+	background-color: #0074D9;
+	color: white;
 }
 
 footer span {
 	font-size: 0.8em;
-	color: rgba(0,0,0,0.5);
+	color: rgba(255,255,255,0.5);
 	line-height: 1;
 }
 
