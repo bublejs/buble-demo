@@ -66,7 +66,7 @@
 			var sections = document.querySelectorAll( 'section' );
 			var nav = {};
 			var lis = document.querySelectorAll( '.sidebar li' );
-			console.log( 'lis', lis )
+
 			for ( var i = 0; i < lis.length; i += 1 ) {
 				var li = lis[i];
 				var a = li.querySelector( 'a' );
@@ -74,13 +74,9 @@
 				nav[ a.getAttribute( 'href' ).slice( 1 ) ] = li;
 			}
 
-			console.log( 'nav', nav )
-
 			var highlighted = null;
 
 			document.querySelector( 'main' ).addEventListener( 'scroll', function () {
-				console.log( 'scrolling' )
-
 				for ( var i = 0; i < sections.length; i += 1 ) {
 					var section = sections[i];
 					var bcr = section.getBoundingClientRect();
@@ -97,6 +93,13 @@
 						return;
 					}
 				}
+			});
+
+			window.addEventListener( 'hashchange', function () {
+				var id = window.location.hash.slice( 1 );
+				var section = document.querySelector( '#' + id );
+
+				section.scrollIntoView();
 			});
 		}());
 
