@@ -38,6 +38,9 @@
 		<span>Built by <a href='http://twitter.com/Rich_Harris'>@Rich_Harris</a>. Bublé is free and open source software released under an MIT license. Version <@version@></span>
 	</footer>
 
+	<!-- include Bublé on the page, so people can play with it in the console -->
+	<script src='/buble.deps.js'></script>
+
 	<!-- CodeMirror JS -->
 	<script src='/codemirror/lib/codemirror.js'></script>
 	<script src='/codemirror/mode/javascript/javascript.js'></script>
@@ -56,6 +59,47 @@
 				mode: { js: 'javascript', bash: 'shell' }[ lang ] || lang
 			});
 		});
+
+		(function () {
+			if ( /mobile/i.test( navigator.userAgent ) ) return;
+
+			var sections = document.querySelectorAll( 'section' );
+			var nav = {};
+			var lis = document.querySelectorAll( '.sidebar li' );
+			console.log( 'lis', lis )
+			for ( var i = 0; i < lis.length; i += 1 ) {
+				var li = lis[i];
+				var a = li.querySelector( 'a' );
+
+				nav[ a.getAttribute( 'href' ).slice( 1 ) ] = li;
+			}
+
+			console.log( 'nav', nav )
+
+			var highlighted = null;
+
+			document.querySelector( 'main' ).addEventListener( 'scroll', function () {
+				console.log( 'scrolling' )
+
+				for ( var i = 0; i < sections.length; i += 1 ) {
+					var section = sections[i];
+					var bcr = section.getBoundingClientRect();
+
+					if ( bcr.top < 150 && bcr.bottom > 150 ) {
+						var li = nav[ section.id ];
+						if ( li === highlighted ) return;
+
+						if ( highlighted ) highlighted.setAttribute( 'class', '' );
+
+						li.setAttribute( 'class', 'highlighted' );
+						highlighted = li;
+
+						return;
+					}
+				}
+			});
+		}());
+
 	</script>
 
 	<!-- Google Analytics -->

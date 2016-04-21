@@ -9,9 +9,9 @@ It also refuses to transpile things that result in ES5 code with size or perform
 With the exception of modules (if you're using an ES2015 module bundler such as [Rollup](http://rollupjs.org/)), you should probably avoid these features until they have widespread native support.
 
 * Computed properties of objects and classes
-* Tagged template strings
+* Tagged template strings (see [Dangerous transforms](#dangerous-transforms))
 * Iterators
-* `for...of` loops
+* `for...of` loops (see [Dangerous transforms](#dangerous-transforms))
 * Generators
 * Regular expression unicode (`u`) and sticky (`y`) flags
 * Modules (pssst... use [Rollup](http://rollupjs.org)!)

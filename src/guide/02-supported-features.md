@@ -75,7 +75,7 @@ var person = {
 
 ### Template strings (`transforms.templateString`)
 
-*Note: Tagged template strings are not supported.*
+*Note: Tagged template strings are not supported, unless you use the `dangerousTaggedTemplateString` transform. See [Dangerous transforms](#dangerous-transforms).*
 
 ```js
 // in
