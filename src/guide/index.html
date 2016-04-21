@@ -39,7 +39,58 @@
 	</footer>
 
 	<!-- include Bublé on the page, so people can play with it in the console -->
-	<script src='/buble.deps.js'></script>
+	<script async defer src='/buble.deps.js'></script>
+
+	<script>
+		(function () {
+			if ( /mobile/i.test( navigator.userAgent ) ) return;
+
+			var sections = document.querySelectorAll( 'section' );
+			var nav = {};
+			var lis = document.querySelectorAll( '.sidebar li' );
+
+			for ( var i = 0; i < lis.length; i += 1 ) {
+				var li = lis[i];
+				var a = li.querySelector( 'a' );
+
+				nav[ a.getAttribute( 'href' ).slice( 1 ) ] = li;
+			}
+
+			var highlighted = null;
+
+			function highlight () {
+				for ( var i = 0; i < sections.length; i += 1 ) {
+					var section = sections[i];
+					var bcr = section.getBoundingClientRect();
+
+					if ( bcr.top < 150 && bcr.bottom > 150 ) {
+						var li = nav[ section.id ];
+						if ( li === highlighted ) return;
+
+						if ( highlighted ) highlighted.setAttribute( 'class', '' );
+
+						li.setAttribute( 'class', 'highlighted' );
+						highlighted = li;
+
+						return;
+					}
+				}
+			}
+
+			document.querySelector( 'main' ).addEventListener( 'scroll', highlight );
+			highlight();
+
+			function scrollIntoView () {
+				var id = window.location.hash.slice( 1 );
+				var section = document.querySelector( '#' + id );
+
+				if ( section ) section.scrollIntoView();
+			}
+
+			window.addEventListener( 'hashchange', scrollIntoView );
+			scrollIntoView();
+		}());
+	</script>
 
 	<!-- CodeMirror JS -->
 	<script src='/codemirror/lib/codemirror.js'></script>
@@ -59,50 +110,6 @@
 				mode: { js: 'javascript', bash: 'shell' }[ lang ] || lang
 			});
 		});
-
-		(function () {
-			if ( /mobile/i.test( navigator.userAgent ) ) return;
-
-			var sections = document.querySelectorAll( 'section' );
-			var nav = {};
-			var lis = document.querySelectorAll( '.sidebar li' );
-
-			for ( var i = 0; i < lis.length; i += 1 ) {
-				var li = lis[i];
-				var a = li.querySelector( 'a' );
-
-				nav[ a.getAttribute( 'href' ).slice( 1 ) ] = li;
-			}
-
-			var highlighted = null;
-
-			document.querySelector( 'main' ).addEventListener( 'scroll', function () {
-				for ( var i = 0; i < sections.length; i += 1 ) {
-					var section = sections[i];
-					var bcr = section.getBoundingClientRect();
-
-					if ( bcr.top < 150 && bcr.bottom > 150 ) {
-						var li = nav[ section.id ];
-						if ( li === highlighted ) return;
-
-						if ( highlighted ) highlighted.setAttribute( 'class', '' );
-
-						li.setAttribute( 'class', 'highlighted' );
-						highlighted = li;
-
-						return;
-					}
-				}
-			});
-
-			window.addEventListener( 'hashchange', function () {
-				var id = window.location.hash.slice( 1 );
-				var section = document.querySelector( '#' + id );
-
-				section.scrollIntoView();
-			});
-		}());
-
 	</script>
 
 	<!-- Google Analytics -->
