@@ -15,12 +15,14 @@
 
 	p {
 		margin: 0 0 1em 0;
+		line-height: 1.5;
 	}
 
 	code {
 		background-color: #f9f9f9;
 		padding: 0.2em 0.4em;
 		border-radius: 3px;
+		white-space: pre;
 	}
 
 	section:first-child h3 {
@@ -56,5 +58,6 @@
 
 	li {
 		margin: 0;
+		line-height: 1.5;
 	}
 }
