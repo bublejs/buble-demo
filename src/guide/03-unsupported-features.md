@@ -18,4 +18,3 @@ With the exception of modules (if you're using an ES2015 module bundler such as 
 * `Map`, `Set`, `WeakMap`, `WeakSet`, `Proxy`, `Symbol`
 * Tail call optimisation
 * Compound destructuring
-* ES2016 and beyond

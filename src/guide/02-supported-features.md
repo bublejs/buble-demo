@@ -172,3 +172,16 @@ assert.equal( 0b101010 === 0o52 );
 // out
 assert.equal( 42 === 42 );
 ```
+
+
+### Exponentiation operator (`transforms.exponentiation`)
+
+```js
+// in
+var cubed = x ** 3;
+a **= b;
+
+// out
+var cubed = Math.pow( x, 3 );
+a = Math.pow( a, b );
+```
