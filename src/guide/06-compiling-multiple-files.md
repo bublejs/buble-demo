@@ -8,4 +8,4 @@ You can compile a whole directory of files in one go like so:
 buble -i src -o dest
 ```
 
-The same options apply as for individual files – except that you *must* include the `--output` option.
+The same options apply as for individual files – except that you *must* include the `--output`/`-o` option.

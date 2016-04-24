@@ -14,3 +14,7 @@
 	min-height: 5em;
 	/*max-height: 80vh;*/
 }
+
+.CodeMirror span {
+	color: #333;
+}

@@ -1,5 +1,5 @@
 ---
-title: Options
+title: Command line options
 ---
 
 If you're targeting more modern environments, you may not need to transform everything – for example, current versions of Node.js and most modern browsers already support shorthand object properties and methods.
@@ -39,6 +39,8 @@ The following can be used with `--yes` and `--no` (or with the `transforms` opti
 * `computedProperty`
 * `conciseMethodProperty`
 * `constLoop`
+* `dangerousForOf`
+* `dangerousTaggedTemplateString`
 * `defaultParameter`
 * `destructuring`
 * `forOf`
