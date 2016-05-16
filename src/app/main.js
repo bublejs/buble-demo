@@ -43,13 +43,13 @@ let obj = {
 
 // template strings
 let message = \`
-  hello !
+  hello \${name}!
   it's good to see you\`;
 
 // destructuring
 let { x, y } = point;
 let { top, left } = element.getBoundingClientRect();
-let [ one, two, three ] = document.querySelector( 'p' );
+let [ one, two, three ] = document.querySelectorAll( 'p' );
 
 // default parameters
 function foo ( options = {} ) {
