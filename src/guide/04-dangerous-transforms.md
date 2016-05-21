@@ -23,11 +23,11 @@ for ( var i = 0, list = document.querySelectorAll( 'div' ); i < list.length; i +
 }
 ```
 
-The `for-of` statement works with *iterable values*, which includes any `Array`, `String`, `Map`, `Set`, or `NodeList` (think `document.querySelectorAll('div')`), but also any other object with a `[Symbol.iterator]` method, or the return value of a generator function.
+The ES6 `for-of` statement works with *iterable values*, which includes any `Array`, `String`, `Map`, `Set`, or `NodeList` (think `document.querySelectorAll('div')`), but also any other object with a `[Symbol.iterator]` method, or the return value of a generator function.
 
-Collections (`Map`, `Set` etc), `Symbol`, and generators aren't supported in ES5 environments, so you can't use those anyway without rather complex polyfills.
+Since collections (`Map`, `Set` etc), `Symbol`, and generators aren't supported in ES5 environments, they are not supported by `dangerousForOf`. Instead, it will assume the *iterable value* to be just an array-like object with `length` property, this includes arrays, strings and nodelists.
 
-But for arrays, strings and nodelists you can achieve the same result by converting it to a regular `for` loop. This is very similar to the [approach taken by TypeScript](https://basarat.gitbooks.io/typescript/content/docs/for...of.html). Unless you're doing something crazy, code written with this transformation in mind will continue to work when you stop using it in favour of using native `for-of` support.
+This is very similar to the [approach taken by TypeScript](https://basarat.gitbooks.io/typescript/content/docs/for...of.html). Unless you're doing something crazy, code written with this transformation in mind will continue to work when you stop using it in favour of using native `for-of` support.
 
 
 ### `dangerousTaggedTemplateString`
