@@ -20,4 +20,14 @@ ReactDOM.render(
 
 You can specify a pragma other than `React.createElement` using the `jsx` option illustrated in the previous section.
 
+If `React` (or whatever other JSX library you're using) isn't available in the global namespace, you're responsible for importing it into the file:
+
+```js
+// ES module
+import * as React from 'react';
+
+// CommonJS
+const React = require( 'react' );
+```
+
 *Note: Bublé does not currently optimise JSX expressions by, for example, hoisting static elements. Coming soon!*
