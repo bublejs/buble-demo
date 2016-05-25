@@ -2,11 +2,11 @@
 title: What is Bublé?
 ---
 
-Bublé is an ES2015 compiler. It takes your ES2015 JavaScript code and turns it into code that can run in today's environments, including old versions of Node.js and Internet Explorer.
+Bublé is an ES2015+ compiler. It takes your ES2015/16 JavaScript code and turns it into code that can run in today's environments, including old versions of Node.js and Internet Explorer.
 
 As the name suggests, Bublé is heavily inspired by (and indebted to) [Babel](https://babeljs.io) – but there are some key differences:
 
-* Bublé limits itself to ES2015 that can be compiled to compact, performant ES5
+* Bublé limits itself to ES features that can be compiled to compact, performant ES5 (plus [JSX](JSX))
 * There are no plugins or presets – less extensibility, but also zero configuration
 * Code is only altered where necessary – your formatting and code style remain intact
 * It's comparatively tiny and much faster

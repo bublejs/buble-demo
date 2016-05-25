@@ -37,6 +37,9 @@ var output = buble.transform( input, {
 
   // used for sourcemaps
   file: 'output.js',
-  source: 'input.js'
+  source: 'input.js',
+
+  // custom JSX pragma (see below)
+  jsx: 'NotReact.createElement'
 });
 ```
