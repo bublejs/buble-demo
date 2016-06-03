@@ -37,6 +37,6 @@ Forgoing the flexibility of a plugin system also makes it easy for Bublé to be 
 
 ### What does Babel do better than Bublé?
 
-Lots of things. It's mature, battle-tested and has a huge and enthusiastic community around it. It's extremely flexible, allowing you to create your own transformation plugins, and has a large ecosystem of existing plugins. It can handle JSX.
+Lots of things. It's mature, battle-tested and has a huge and enthusiastic community around it. It's extremely flexible, allowing you to create your own transformation plugins, and has a large ecosystem of existing plugins.
 
 If you need the additional power and flexibility, or don't share Bublé's [opinions](#what-is-buble) about spec compliance, you should continue to use Babel.
