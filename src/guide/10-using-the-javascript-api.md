@@ -40,6 +40,9 @@ var output = buble.transform( input, {
   source: 'input.js',
 
   // custom JSX pragma (see below)
-  jsx: 'NotReact.createElement'
+  jsx: 'NotReact.createElement',
+
+  // custom `Object.assign` (used in object spread)
+  objectAssign: 'angular.extend'
 });
 ```

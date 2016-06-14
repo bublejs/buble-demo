@@ -185,3 +185,36 @@ a **= b;
 var cubed = Math.pow( x, 3 );
 a = Math.pow( a, b );
 ```
+
+
+### Computed properties (`transforms.computedProperty`)
+
+```js
+// in
+var obj = {
+  [a]: 1
+};
+
+var obj = {};
+obj[a] = 1;
+```
+
+
+### Object spread
+
+This isn't part of ES2015 or ES2016 – it's currently one half of a [stage 2 proposal](https://github.com/sebmarkbage/ecmascript-rest-spread) – but since it's commonly used with JSX, it's supported in Bublé. (Object rest properties are *not* currently supported.)
+
+You may need to polyfill `Object.assign` depending on your target environment; alternatively you can use the `objectAssign` option to specify an alternative.
+
+```js
+// in
+var obj = { ...x };
+
+// out
+var obj = Object.assign({}, x);
+```
+
+
+### JSX
+
+[See below.](jsx)
