@@ -38,7 +38,8 @@ let obj = {
   shorthandProperty,
   shorthandMethod () {
     console.log( 'hello!' );
-  }
+  },
+  [computed]: 42
 };
 
 // template strings
