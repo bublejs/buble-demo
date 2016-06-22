@@ -12,7 +12,7 @@ With the exception of modules (if you're using an ES2015 module bundler such as 
 * Iterators
 * `for...of` loops (see [Dangerous transforms](#dangerous-transforms))
 * Generators
-* Regular expression unicode (`u`) and sticky (`y`) flags
+* Regular expression sticky (`y`) flag
 * Modules (pssst... use [Rollup](http://rollupjs.org)!)
 * `Map`, `Set`, `WeakMap`, `WeakSet`, `Proxy`, `Symbol`
 * Tail call optimisation

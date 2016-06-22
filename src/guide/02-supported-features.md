@@ -200,6 +200,17 @@ obj[a] = 1;
 ```
 
 
+### Unicode regular expressions (`transforms.unicodeRegExp`)
+
+```js
+// in
+var regex = /a💩b/u;
+
+// out
+var regex = /a(?:\uD83D\uDCA9)b/;
+```
+
+
 ### Object spread
 
 This isn't part of ES2015 or ES2016 – it's currently one half of a [stage 2 proposal](https://github.com/sebmarkbage/ecmascript-rest-spread) – but since it's commonly used with JSX, it's supported in Bublé. (Object rest properties are *not* currently supported.)
