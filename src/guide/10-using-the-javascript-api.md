@@ -43,6 +43,10 @@ var output = buble.transform( input, {
   jsx: 'NotReact.createElement',
 
   // custom `Object.assign` (used in object spread)
-  objectAssign: 'angular.extend'
+  objectAssign: 'angular.extend',
+
+  // prevent function expressions generated from class methods
+  // from being given names – needed to prevent scope leak in IE8
+  namedFunctionExpressions: false
 });
 ```

@@ -54,3 +54,8 @@ The following can be used with `--yes` and `--no` (or with the `transforms` opti
 * `stickyRegExp`
 * `templateString`
 * `unicodeRegExp`
+
+
+## Emitting named function expressions
+
+By default, Bublé will create named function expressions from e.g. class methods, which is useful for debugging. Due to an IE8 bug whereby function expression names become part of the parent scope, this can cause bugs. Disable named function expressions with `--no-named-function-expr` – equivalent to `namedFunctionExpressions: false` in the JavaScript API.
