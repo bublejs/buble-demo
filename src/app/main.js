@@ -15,7 +15,7 @@ const sample = `
   the issue. Thanks!
 
   Note that some ES2015 features are deliberately
-  unsupported - click the 'more info' link in nav.
+  unsupported - click the 'guide' link in nav.
 */
 
 // arrow functions
