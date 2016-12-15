@@ -129,7 +129,9 @@
 
 				try {
 					this.set({
-						output: buble.transform( input ).code,
+						output: buble.transform( input, {
+							objectAssign: "Object.assign"
+						}).code,
 						error: null
 					});
 				} catch ( err ) {
