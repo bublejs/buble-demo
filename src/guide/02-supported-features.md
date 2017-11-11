@@ -211,9 +211,9 @@ var regex = /a(?:\uD83D\uDCA9)b/;
 ```
 
 
-### Object spread
+### Object spread and rest
 
-This isn't part of ES2015 or ES2016 – it's currently one half of a [stage 2 proposal](https://github.com/sebmarkbage/ecmascript-rest-spread) – but since it's commonly used with JSX, it's supported in Bublé. (Object rest properties are *not* currently supported.)
+This isn't part of ES2015 or ES2016 – it's currently a [stage 3 proposal](https://github.com/sebmarkbage/ecmascript-rest-spread) – but since it's commonly used with JSX, it's supported in Bublé.
 
 You may need to polyfill `Object.assign` depending on your target environment; alternatively you can use the `objectAssign` option to specify an alternative.
 
