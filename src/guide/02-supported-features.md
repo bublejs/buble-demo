@@ -226,6 +226,6 @@ var obj = Object.assign({}, x);
 ```
 
 
-### JSX
+### JSX elements
 
-[See below.](jsx)
+[See below.](#jsx)
