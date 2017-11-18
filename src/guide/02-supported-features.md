@@ -225,6 +225,26 @@ var obj = { ...x };
 var obj = Object.assign({}, x);
 ```
 
+### Trailing commas in function calls and declarations
+
+```js
+// in
+function f(
+  a,
+  b,
+) {
+}
+f(1, 2,);
+
+// out
+function f(
+  a,
+  b
+) {
+}
+f(1, 2);
+```
+
 
 ### JSX elements
 
