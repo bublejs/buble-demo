@@ -4,7 +4,7 @@
   "description": "Bublé demo",
   "main": "gobblefile.js",
   "dependencies": {
-    "buble": "^0.15.0",
+    "buble": "^0.18.0",
     "codemirror": "^5.16.0",
     "ractive": "ractivejs/ractive#f24c311a17223854feaee4f1f007b7f2bfbd65f6",
     "ractive-transitions-fade": "^0.3.1",
@@ -23,7 +23,7 @@
     "postcss-clearfix": "^1.0.0",
     "postcss-import": "^9.0.0",
     "postcss-nested": "^1.0.0",
-    "rollup-plugin-buble": "^0.14.0",
+    "rollup-plugin-buble": "^0.18.0",
     "rollup-plugin-node-resolve": "^2.0.0",
     "rollup-plugin-ractive": "^2.0.0",
     "sander": "^0.6.0",
