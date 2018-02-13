@@ -38,7 +38,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/Rich-Harris/buble-demo.git"
+    "url": "git+https://github.com/Rich-Harris/buble-demo.git"
   },
   "keywords": [
     "es2015",
@@ -49,7 +49,7 @@
   "author": "Rich Harris",
   "license": "MIT",
   "bugs": {
-    "url": "https://gitlab.com/Rich-Harris/buble-demo/issues"
+    "url": "https://github.com/Rich-Harris/buble-demo/issues"
   },
-  "homepage": "https://gitlab.com/Rich-Harris/buble-demo#README"
+  "homepage": "https://github.com/Rich-Harris/buble-demo"
 }

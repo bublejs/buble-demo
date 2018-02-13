@@ -9,21 +9,12 @@ Blame [Keith Cirkel](https://twitter.com/Keithamus/status/715557928074416130).
 
 ### Will you support feature x?
 
-It depends. If support for a feature can be added in a way that doesn't bloat out the code that Bublé compiles, then yes, possibly. [Raise an issue](https://gitlab.com/Rich-Harris/buble/issues) and we'll discuss it.
+It depends. If support for a feature can be added in a way that doesn't bloat out the code that Bublé compiles, then yes, possibly. [Raise an issue](https://github.com/Rich-Harris/buble/issues) and we'll discuss it.
 
 
 ### Can we have plugins?
 
 No. The whole point of Bublé is that it's quick to install and takes no mental effort to set up. Plugins would ruin that.
-
-
-### Why is the repo on GitLab?
-
-Bublé is developed at [gitlab.com/Rich-Harris/buble](https://gitlab.com/Rich-Harris/buble).
-
-Remember [Dear GitHub](https://github.com/dear-github/dear-github)? There was (and still is) a lot of griping about certain aspects of GitHub – the lack of development of features people need, the lack of transparency, the irony that the open source community uses a closed-source single-point-of-failure to do collaboration. GitLab is better on all counts.
-
-And it's great! It has some really good features (e.g. integrated CI), gives you unlimited private repos and is highly customisable. Using providers other than GitHub is good for the long-term health of the open source ecosystem, and I encourage you to join me.
 
 
 ### How is Bublé so fast?
