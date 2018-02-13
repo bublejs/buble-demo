@@ -82,7 +82,7 @@
 
 			function scrollIntoView () {
 				var id = window.location.hash.slice( 1 );
-				var section = document.querySelector( '#' + id );
+				var section = document.getElementById( id );
 
 				if ( section ) section.scrollIntoView();
 			}
