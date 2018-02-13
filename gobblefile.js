@@ -23,11 +23,7 @@ module.exports = gobble([
 
 	// node_modules
 	gobble( 'node_modules/buble/dist' )
-		.include( 'buble.deps.js' ),
-
-	gobble( 'node_modules/ractive' )
-		.include( 'ractive.runtime.js' )
-		.moveTo( 'ractive' ),
+		.include( 'buble-browser-deps.umd.js' ),
 
 	gobble( 'node_modules/codemirror' )
 		.include([ 'lib/**', 'mode/javascript/**', 'mode/shell/**' ])
@@ -39,13 +35,11 @@ module.exports = gobble([
 			entry: 'main.js',
 			dest: 'app.js',
 			format: 'iife',
-			external: [ 'ractive' ],
 			plugins: [
 				require( 'rollup-plugin-ractive' )(),
 				require( 'rollup-plugin-buble' )(),
 				require( 'rollup-plugin-node-resolve' )({
-					jsnext: true,
-					skip: [ 'ractive' ]
+					jsnext: true
 				})
 			]
 		}),
