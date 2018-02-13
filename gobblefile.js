@@ -109,7 +109,4 @@ module.exports = gobble([
 		.moveTo( 'guide' ),
 
 // minify on deploy, but don't bother in development
-]);
-
-// temporarily disabled... uglify barfs on latest version
-// ]).transformIf( gobble.env() === 'production', 'uglifyjs' );
+]).transformIf( gobble.env() === 'production', 'uglifyjs' );
